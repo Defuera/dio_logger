@@ -1,6 +1,6 @@
 name: dio_logger
 description: Simple logging library for DIO requests
-version: 3.0.9+1
+version: 3.0.9+2
 repository: https://github.com/Defuera/dio_logger
 
 environment:
