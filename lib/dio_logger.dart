@@ -2,13 +2,9 @@ library dio_logging;
 
 import 'package:dio/dio.dart';
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/exposed.dart';
 
-final DioLoggerInterceptor = InterceptorsWrapper(onRequest: (RequestOptions options) async {
+final DioLoggerInterceptor3 = InterceptorsWrapper(onRequest: (RequestOptions options) async {
   String headers = "";
   options.headers.forEach((key, value) {
     headers += "$key: $value\n";
