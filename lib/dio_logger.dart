@@ -1,8 +1,6 @@
-library dio_logging;
+library dio_logger;
 
 import 'package:dio/dio.dart';
-
-export 'src/exposed.dart';
 
 final DioLoggerInterceptor = InterceptorsWrapper(onRequest: (RequestOptions options) async {
   String headers = "";
