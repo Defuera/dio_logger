@@ -1,11 +1,11 @@
 name: dio_logger
 description: Simple logging library for DIO requests
 version: 3.0.9
-author:
-homepage:
+repository: https://github.com/Defuera/dio_logger
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
+
 
 dependencies:
   flutter:

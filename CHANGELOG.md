@@ -1,3 +1,2 @@
-## [0.0.1] - TODO: Add release date.
+## [3.0.9] - First release. Pointing to dio 3.0.9
 
-* TODO: Describe initial release.
