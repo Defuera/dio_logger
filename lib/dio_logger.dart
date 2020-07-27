@@ -17,7 +17,7 @@ final DioLoggerInterceptor = InterceptorsWrapper(onRequest: (RequestOptions opti
   print("├------------------------------------------------------------------------------");
   return options; //continue
 }, onResponse: (Response response) async {
-  print("| [DIO] Response: ${response.data.toString()}");
+  print("| [DIO] Response [code ${response.statusCode}]: ${response.data.toString()}");
   print("└------------------------------------------------------------------------------");
   return response; // continue
 }, onError: (DioError e) async {

@@ -21,7 +21,7 @@ dio.interceptors.add(DioLoggerInterceptor)
 | cache-control: no-cache
 | Access-Token: DJmdklfja3r3Ffmejwhfdgjh
 ├------------------------------------------------------------------------------
-| [DIO] Response: {"email":"justdevelopers@gmail.com","name":"defuera"}
+| [DIO] Response [code 200]: {"email":"justdevelopers@gmail.com","name":"defuera"}
 └------------------------------------------------------------------------------
 ```
 
