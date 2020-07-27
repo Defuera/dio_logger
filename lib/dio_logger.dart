@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 
 export 'src/exposed.dart';
 
-final DioLoggerInterceptor3 = InterceptorsWrapper(onRequest: (RequestOptions options) async {
+final DioLoggerInterceptor = InterceptorsWrapper(onRequest: (RequestOptions options) async {
   String headers = "";
   options.headers.forEach((key, value) {
     headers += "$key: $value\n";
