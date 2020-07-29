@@ -2,10 +2,10 @@ library dio_logger;
 
 import 'package:dio/dio.dart';
 
-final DioLoggerInterceptor = InterceptorsWrapper(onRequest: (RequestOptions options) async {
+final dioLoggerInterceptor = InterceptorsWrapper(onRequest: (RequestOptions options) async {
   String headers = "";
   options.headers.forEach((key, value) {
-    headers += "| $key: $value\n";
+    headers += "| $key: $value";
   });
 
   print("┌------------------------------------------------------------------------------");

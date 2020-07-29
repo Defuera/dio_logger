@@ -1,0 +1,11 @@
+name: dio_logger_example
+description: Demonstrates how to use the dio_logger package.
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  dio: ^3.0.9
+  dio_logger:
+    path: ../
