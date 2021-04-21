@@ -2,7 +2,7 @@ library dio_logger;
 
 import 'package:dio/dio.dart';
 
-final dioLoggerInterceptor = InterceptorsWrapper(onRequest: (RequestOptions options) async {
+final dioLoggerInterceptor = InterceptorsWrapper(onRequest: (RequestOptions options, handler) {
   String headers = "";
   options.headers.forEach((key, value) {
     headers += "| $key: $value";
@@ -13,13 +13,14 @@ final dioLoggerInterceptor = InterceptorsWrapper(onRequest: (RequestOptions opti
 | ${options.data.toString()}
 | Headers:\n$headers''');
   print("├------------------------------------------------------------------------------");
-  return options; //continue
-}, onResponse: (Response response) async {
+  handler.next(options);  //continue
+}, onResponse: (Response response, handler) async {
   print("| [DIO] Response [code ${response.statusCode}]: ${response.data.toString()}");
   print("└------------------------------------------------------------------------------");
-  return response; // continue
-}, onError: (DioError e) async {
-  print("| [DIO] Error: ${e.toString()}");
+  handler.next(response);
+  // return response; // continue
+}, onError: (DioError error, handler) async {
+  print("| [DIO] Error: ${error.toString()}");
   print("└------------------------------------------------------------------------------");
-  return e; //continue
+  handler.next(error); //continue
 });
