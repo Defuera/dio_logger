@@ -6,7 +6,7 @@ Simple logging interceptor for [Dio](https://pub.dev/packages/dio).
 
 ```
 final dio = Dio();
-dio.interceptors.add(DioLoggerInterceptor)
+dio.interceptors.add(dioLoggerInterceptor)
 ```
 
 ## Sample output:
