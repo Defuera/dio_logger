@@ -9,11 +9,11 @@ final dioLoggerInterceptor = InterceptorsWrapper(onRequest: (RequestOptions opti
   });
 
   print("┌------------------------------------------------------------------------------");
-  print('''| [DIO] Request: ${options.method} ${options.uri}
-| ${options.data.toString()}
-| Headers:\n$headers''');
+  print('| [DIO] Request: ${options.method} ${options.uri}');
+  print('| ${options.data.toString()}');
+  print('| Headers:\n$headers');
   print("├------------------------------------------------------------------------------");
-  handler.next(options);  //continue
+  handler.next(options); //continue
 }, onResponse: (Response response, handler) async {
   print("| [DIO] Response [code ${response.statusCode}]: ${response.data.toString()}");
   print("└------------------------------------------------------------------------------");
