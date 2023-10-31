@@ -1,6 +1,6 @@
 name: dio_logger
 description: Simple logging library for DIO requests. Prints request and response information to a console.
-version: 4.0.9+9
+version: 4.0.10
 repository: https://github.com/Defuera/dio_logger
 
 environment:
